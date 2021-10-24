@@ -1,0 +1,17 @@
+<%= form_with(model: post, local: true, url: choose_new_or_edit) do |form| %>
+    <div>
+        <div>
+            <%= form.label "Content" %>
+        </div>
+        <%= form.text_area :content %>
+        <div>
+            <%= form.label :image %>
+        </div>
+    </div>
+    <div>
+        <%= image_tag(@post.image.url) if @post.image && @post.image.url %>
+        <%= form.file_field :image %>
+        <%= form.hidden_field :image_cache %>
+    </div>
+        <%= form.submit %>
+<% end %>

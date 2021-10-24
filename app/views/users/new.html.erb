@@ -1,0 +1,37 @@
+<div class="container newPage">
+    <h2> Créer un nouveau compte</h2>
+    <% if @user.errors.any?%> 
+        <div id = "error_explanation"> 
+        <h2> <%= pluralize(@user.errors.count, "error")%> a interdit l'enregistrement de ce <%= @user.name%>: </h2> 
+        <ul> 
+            <% @user.errors.full_messages.each do | message |%> 
+        <li> <%= message%> </li> 
+    <% end%> 
+        </ul>
+ </div> 
+ <% end%> 
+    <div class="newForm">
+        <h3>S'inscrire</h3>
+        <p>C'est rapide et facile</p>
+        <hr>
+        <%= form_with(model: @user,  local: true) do |f| %>
+            <div class="row">
+                <div class="col-md-6">
+                    <%= f.label :name, class: "tLabel" %>
+                    <%= f.text_field :name, class:"tField" %>
+                </div>
+                <div class="col-md-6">
+                    <%= f.label :surname, class: "tLabel" %>
+                    <%= f.text_field :surname, class: "tField" %>
+                </div>
+            </div>
+            <%= f.label :email, class: "tLabel" %>
+            <%= f.text_field :email, class: "tField lField" %>
+            <%= f.label :password, class: "tLabel" %>
+            <%= f.password_field :password, class: "tField lField" %>
+            <%= f.label :password_confirmation, class: "tLabel" %>
+            <%= f.password_field :password_confirmation, class: "tField lField" %>
+            <%= f.submit "S'inscrire" , class: "submit"%>
+        <% end %>
+    </div>
+</div>

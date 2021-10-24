@@ -1,0 +1,12 @@
+<div id="login">
+    <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+        <%= f.label :email, class:"labelForm" %> 
+        <%= f.email_field :email, class:"inputForm" %>
+        <%= f.label "Mots de passe", class:"labelForm" %>
+        <%= f.password_field :password, class:"inputForm" %>
+        <%= f.submit "Se connecter", class:"bSubmit" %>
+    <% end %>
+    <p> Mot de passe oublié?</p>
+    <hr>
+    <%= link_to "Créer un nouveau compte", new_user_path, class: 'new'%>
+</div>

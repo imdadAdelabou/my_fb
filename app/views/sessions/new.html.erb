@@ -1,0 +1,17 @@
+<div class="container row content">
+    <div class="col-md-6 leftElement">
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" />
+        <h3>Connexions récentes</h3>
+        <p>Cliquez sur votre image ou sur Ajouter un compte</p>
+        <div class="row allCard">
+            <%= render partial: 'card', locals: {url: "https://scontent-lcy1-1.xx.fbcdn.net/v/t1.6435-1/p720x720/180233055_108619591381284_7650375547148568226_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=dbb9e7&_nc_ohc=8ZcjYg6zNfUAX9YZuVx&_nc_oc=AQm48t4l-hMwIPTHVgtusAxNdX0eW6B2qImAGn31zR77c5bvH5p1JPOi5p5Okuy87bc&_nc_ht=scontent-lcy1-1.xx&oh=0d00290b5e22786fbc16d5828c5e2fa8&oe=61833D95", title: "imdad"}%>
+            <%= render partial: 'card', locals: {url: "https://images2.minutemediacdn.com/image/upload/c_fill,w_360,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/Manchester-United-v-Everton---Premier-League-6321e461fa452e46208a32828d104f67.jpg", title: "Ajouter un compte"} %>
+        </div>
+    </div>
+    <div class="col-md-6 rightElement">
+        <div class="mForm">
+           <%= render 'login' %>
+        </div>
+        <p>Créer une page pour une célébrité, un groupe ou une<br> entreprise.</p>
+    </div>
+</div>
