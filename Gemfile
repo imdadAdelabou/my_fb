@@ -18,7 +18,14 @@ gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.5'
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'bcrypt'
+gem 'mimemagic'
+
 gem 'bootsnap', '>= 1.1.0', require: false
+
+
 
 group :development, :test do
   
